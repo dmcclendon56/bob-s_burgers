@@ -1,22 +1,28 @@
 import './App.css';
+import Characters from './componets/Characters';
+import { Routes, Route } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
 
-function App() {
+function App(props) {
+  const [character, setCharacter] = useState(null)
+
+    function getCharacter(){
+        fetch('https://bobsburgers-api.herokuapp.com/characters/')
+        .then((res)=> res.json())
+        .then((res) => setCharacter(res.results))
+          
+          .catch(console.error)
+
+    }
+    useEffect(() => {
+        getCharacter();
+    }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+    <Route exact path='/' element= {<Characters character={character}/>} />
+    <Route exact path='/:index' element= {<Characters character={character}/>} />
+    </Routes>
+    
   );
 }
 

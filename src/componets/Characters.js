@@ -1,11 +1,11 @@
 // import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import App from '../App';
 
 function Characters(props) {
     console.log(props.character);
 
   return (
-      
     <div>
         {props.character ? props.character.map((character, idx) => (
                 <div key={idx}>
@@ -21,6 +21,9 @@ function Characters(props) {
     </div>
   )
 }
+  
 
-
+   
+    
+   
 export default Characters;

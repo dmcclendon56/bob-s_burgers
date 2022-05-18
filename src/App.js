@@ -7,6 +7,7 @@ import SearchBar from './componets/SearchBar';
 import CharacterData from './bobsBurgersList.json'
 import Header from './componets/Header';
 
+
 function App(props) {
   const [character, setCharacter] = useState(null)
 

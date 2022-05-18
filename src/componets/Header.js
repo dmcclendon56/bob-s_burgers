@@ -1,5 +1,7 @@
 import { } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import CharactersList from "../pages/CharactersList";
+import About from "../pages/About";
 
 
 function Header(props) {
@@ -19,10 +21,10 @@ return (
         <Link to="/">
             <div>HOME</div>
         </Link>
-        <Link to="/characterList">
-          <div>CHARACTERS</div>
+        <Link to={<CharactersList />}>
+          <div>CHARACTER LIST</div>
         </Link>
-        <Link to="/about">
+        <Link to="../pages/About">
           <div>ABOUT</div>
         </Link>
         </nav>  

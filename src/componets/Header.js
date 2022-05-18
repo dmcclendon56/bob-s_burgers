@@ -1,4 +1,5 @@
 import { } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 function Header(props) {
@@ -13,16 +14,16 @@ function Header(props) {
 
 return (
     <header>
-        <h1>Characters</h1>
+        <h1>Bob's Burgers</h1>
         <nav style={navStyle}>
         <Link to="/">
             <div>HOME</div>
         </Link>
+        <Link to="/characterList">
+          <div>CHARACTERS</div>
+        </Link>
         <Link to="/about">
           <div>ABOUT</div>
-        </Link>
-        <Link to="/projects">
-          <div>PROJECTS</div>
         </Link>
         </nav>  
     </header>

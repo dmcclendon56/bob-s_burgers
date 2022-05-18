@@ -1,5 +1,7 @@
+//https://www.youtube.com/watch?v=x7niho285qs
 import React, {useState} from 'react'
 import './SearchBar.css'
+
 
 function SearchBar({placeholder, data}) {
 
@@ -10,7 +12,7 @@ function SearchBar({placeholder, data}) {
         const newList = data.filter((value) => {
             return value.name.toLowerCase().includes(nameSearch.toLowerCase());
         });
-
+//
         if(nameSearch === "") {
             setFilteredData([]);
 
@@ -27,11 +29,11 @@ function SearchBar({placeholder, data}) {
 
         </div>
         </div>
-        {filteredData.length != 0 && (
+        {filteredData.length !== 0 && (
         <div className='dataResult'>
             {filteredData.slice(0,15).map((value, key) => {   
                 return (
-                <a className='dataItem' href={value.wikiUrl} target="_blank">
+                <a className='dataItem' href={value.CharacterList} target="_blank">
                 <p> {value.name} </p>
                 </a>
                 );

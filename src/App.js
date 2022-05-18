@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import SearchBar from './componets/SearchBar';
 import CharacterData from './bobsBurgersList.json'
+import Header from './componets/Header';
 
 function App(props) {
   const [character, setCharacter] = useState(null)
@@ -23,6 +24,7 @@ function App(props) {
   return (
     <div>
       <SearchBar placeholder="Enter a character name..." data={CharacterData} />
+    <Header />
     <Routes>
     <Route exact path='/' element= {<Characters character={character}/>} />
     <Route path='/:index' element= {<CharacterList character={character}/>} />

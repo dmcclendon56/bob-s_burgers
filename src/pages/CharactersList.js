@@ -1,22 +1,25 @@
 // import React from 'react'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import App from '../App';
 import { useParams } from 'react-router-dom'
 
 
 
 function CharactersList(props) {
-    let { index } = useParams()
-    console.log(index)
-    let charactersList = props.charactersList[index]
+    
   return(
-      <>
-        <h3>{charactersList.name}</h3>
-      </>
-  )
-  
-
-}
+        <div>
+            {props.character ? props.character.map((character, idx) => (
+                    <div key={idx}>
+                        <Link to={`/${idx}`} >
+                            <h2>{character.name}</h2>
+                        </Link>
+                    </div>
+                )) : <h3>LOADING! PLEASE WAIT!</h3>}
+                
+        </div>
+        )
+        }
 export default CharactersList
 
 

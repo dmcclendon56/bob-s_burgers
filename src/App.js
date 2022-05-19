@@ -25,8 +25,8 @@ function App(props) {
     }, [])
   return (
     <div>
-      <SearchBar placeholder="Enter a character name..." data={CharacterData} />
     <Header />
+      <SearchBar placeholder="Enter a character name..." data={CharacterData} />
     <Routes>
     <Route exact path="/characterslist" element= {<CharactersList character={character}/>}/>
     <Route exact path="/about" element= {<About />}/>

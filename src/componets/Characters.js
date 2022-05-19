@@ -78,13 +78,13 @@ import ReactPaginate from 'react-paginate';
 // }
 function Characters(props) {
   const [character, setCharacter] = useState([])
-
+  const [currentPage, setCurrentPage]= useState(0)
   // const [pageCount, setpageCount] = useState(0)
 
   useEffect(()=> {
     const getCharacter = async () => {
       const res = await fetch(
-        `https://bobsburgers-api.herokuapp.com/characters/`
+        `https://bobsburgers-api.herokuapp.com/characters?limit=6&skip=${currentPage * 6}`
       );
       const data = await res.json(); 
       setCharacter(data);
@@ -94,38 +94,38 @@ function Characters(props) {
     // console.log(items);
     // console.log(props.character);
 
-    const fetchCharacter = async (currentPage) =>{
-      const res = await fetch(
-        `https://bobsburgers-api.herokuapp.com/characters?page=${currentPage}`
-      );
-      const data = await res.json()
-      return data;
-    }
+    // const fetchCharacter = async (currentPage) =>{
+    //   const res = await fetch(
+    //     ``
+    //   );
+    //   const data = await res.json()
+    //   return data;
+    // }
 
     const handlePageClick = async (data) =>{
+      setCurrentPage(data.selected)
       console.log(data.selected)
 
-      let currentPage = data.selected + 1
-      const charactersFromServer = await fetchCharacter(currentPage);
-
-      setCharacter(charactersFromServer)
+      // let currentPage = data.selected 
+      // const charactersFromServer = await fetchCharacter(currentPage);
+      //     console.log(charactersFromServer)
+      // setCharacter(charactersFromServer)
     
     }
 
 
   return (
-    <div>
-  {character.map((item) =>{
-  return <div className='col-sm-6 col-md-4 v my-2'>
-    {/* <div className= "card shadow-sm w-100" style={{minHeigh: 225}}>
-    <div className="card-body">
-        <h5 className="card-title text-center h2"></h5>
-        <h6 className='"card-subtitle mb-2 text-muted text-center'></h6>
-        <p className='card-text'></p>
-    </div>
-    </div> */}
-    </div>;
-})}
+     <div>
+  {/* {character.map((item) =>{
+//   return <div className='col-sm-4 col-md-2 v my-1'>
+//     {/* <div className= "card shadow-sm w-100" style={{minHeigh: 225}}>
+//     <div className="card-body">
+//         <h5 className="card-title text-center h2"></h5>
+//         <h6 className='"card-subtitle mb-2 text-muted text-center'></h6>
+//         <p className='card-text'></p>
+//     </div>
+//     </div> */}
+
     <ReactPaginate
           previousLabel={'<<'}
           nextLabel={'>>'}
@@ -146,19 +146,20 @@ function Characters(props) {
           activeClassName={'active'}
           /> 
       
-        {props.character ? props.character.map((character, idx) => (
+        {character ? character.map((character, idx) => (
                 <div key={idx}>
-                  <div className= "card shadow-sm w-100" style={{maxHeigh: 20}}>
-                  <div className="card-body">
-                    <Link to={`/${idx}`} >
+                  <div className= "card shadow-sm w-flex" style={{maxHeigh: 20}}>
+                  <div className="card-title text-center h2">
+                    <Link to={`/${idx +(currentPage * 6)}`} >
                         <h2 >{character.name}</h2>
                     </Link>
                     <img className='"card-subtitle mb-2 text-muted text-center' src={character.image} alt='characters portrait'></img>
-                    <h2>{character.occupation}</h2>
+                    <h2 className='card-text'>{character.occupation}</h2>
+                    <button>View More</button>
                 </div>
                 </div>
                 </div>
-            )) : <h3>LOADING! PLEASE WAIT!</h3>}
+            )) : <h3>LOADING...</h3>}
     
     </div>
   )

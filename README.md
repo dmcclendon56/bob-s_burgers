@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Description:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app allows users to see a list of characters in the Bob’s Burger universe. Each character has a blurb of which episode they appeared in, who they were voiced by, and other fun facts.
 
-## Available Scripts
+- https://6286e5c1d7193f59cd2947f4--vermillion-eclair-47c7f6.netlify.app/
 
-In the project directory, you can run:
+![Screen Shot 2022-05-20 at 8 14 14 AM](https://user-images.githubusercontent.com/101522627/169535594-2e1e9b6c-c2eb-446c-aac7-669d9f4e7943.png)
 
-### `npm start`
+![Screen Shot 2022-05-15 at 9 31 42 AM](https://user-images.githubusercontent.com/101522627/169535641-060bbca3-ae54-4688-b5e8-4556925aaa91.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used:
+- React
+- React paginate
+- Css
+- HTML
+- Bootstrap
 
-### `npm test`
+### Getting Started
+Fork and clone the repository
+`npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Contribution Guidelines
+Please leave comments/guidance on where and how to better The Bob's Burgers App. Any bugs you encountered, code that could use condensing and any other improvements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### licensing
+- API used - https://bobs-burgers-api-ui.herokuapp.com/
+- ![Screen Shot 2022-05-20 at 8 08 45 AM](https://user-images.githubusercontent.com/101522627/169534954-c89c08aa-1150-4327-8cb5-f822a4a7d61a.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Search Bar
+- https://www.youtube.com/watch?v=x7niho285qs
+- https://github.com/machadop1407/React-Search-Bar
+  
+  
+```
+ <ReactPaginate
+          previousLabel={'<<'}
+          nextLabel={'>>'}
+          breakLabel={'...'}
+          pageCount={85}
+          marginPagesDisplayed={4}
+          pageRangeDisplayed={2}
+          onPageChange={handlePageClick}
+          containerClassName={'pagination justify-content-center'}
+          pageClassName={'page-item'}
+          pageLinkClassName={'page-link'}
+          previousClassName={'page-item'}
+          previousLinkClassName={'page-link'}
+          nextClassName={'page-item'}
+          nextLinkClassName={'page-link'}
+          breakClassName={'page-item'}
+          breakLinkClassName={'page-link'}
+          activeClassName={'active'}
+          /> 
+```

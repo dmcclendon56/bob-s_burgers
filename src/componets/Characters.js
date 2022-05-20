@@ -32,9 +32,9 @@ function Characters(props) {
 
 
   return (
-     <div>
+     <div className='grid'>
         {character ? character.map((character, idx) => (
-                <div key={idx}>
+                <div className='' key={idx}>
                   <div className= "card shadow-sm w-flex" style={{maxHeigh: 20}}>
                   <div className="card-title text-center h2">
                     <Link to={`/${idx +(currentPage * 6)}`} >

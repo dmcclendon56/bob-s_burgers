@@ -1,6 +1,6 @@
 /* https://github.com/machadop1407/React-Search-Bar */
 .searchInputs {
-    margin-top: 20px;
+  margin-top: 20px;
   display: flex;
   margin-bottom: 10px;
     
@@ -32,9 +32,9 @@
     overflow-y: auto;
   }
   
-  /* .dataResult::-webkit-scrollbar {
+  .dataResult::-webkit-scrollbar {
     display: none;
-  } */
+  }
   
   .dataResult .dataItem {
     width: 100%;

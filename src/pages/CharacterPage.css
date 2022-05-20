@@ -18,3 +18,13 @@
     align-items: center;
     display: flex;
 }
+
+.family {
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+}

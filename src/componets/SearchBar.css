@@ -13,12 +13,10 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     font-size: 15px;
-   
-    
-   
+  
   }
   
-   */
+  
   input:focus {
     outline: 3ch;
   }

@@ -28,9 +28,13 @@ Please leave comments/guidance on where and how to better The Bob's Burgers App.
 - API used - https://bobs-burgers-api-ui.herokuapp.com/
 - ![Screen Shot 2022-05-20 at 8 08 45 AM](https://user-images.githubusercontent.com/101522627/169534954-c89c08aa-1150-4327-8cb5-f822a4a7d61a.png)
 
-### Search Bar
+### Search Bar & Pagination
 - https://www.youtube.com/watch?v=x7niho285qs
 - https://github.com/machadop1407/React-Search-Bar
+
+
+- https://www.npmjs.com/package/react-paginate
+- https://www.youtube.com/watch?v=kMuRr53RjcE&t=1408s
   
   
 ```

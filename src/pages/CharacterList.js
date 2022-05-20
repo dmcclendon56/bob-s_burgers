@@ -8,7 +8,7 @@ function CharacterList(props) {
  let character = props.character[index]
   return (
       <div className='characterlist'>
-      <h2>{character.name}</h2>
+      <h1>{character.name}</h1>
       <img src={character.image} alt="characters picture"></img>
       <h2>Gender: {character.gender}</h2>
       <h2>Hair Color: {character.hairColor}</h2>

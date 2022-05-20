@@ -17,7 +17,7 @@ function CharactersList(props) {
                         </Link>
                         <hr/>
                     </div>
-                )) : <h3>LOADING! PLEASE WAIT!</h3>}
+                )) : <h3>LOADING...</h3>}
                 
         </div>
         )

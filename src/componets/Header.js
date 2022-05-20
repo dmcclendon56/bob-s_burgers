@@ -13,12 +13,18 @@ function Header(props) {
         width: "90%",
         margin: "auto",
     };
+    const logo = {
+      display: "block",
+      marginLeft: "auto",
+      marginRight: "auto"
+,    }
+  
 
 return (
   <>
-  <img src='https://i.pinimg.com/originals/2e/a9/e2/2ea9e2ee06ca162ba3e2b0e3548c842c.jpg' alt="Bob's burger street view"/>
+  <img  src='https://i.pinimg.com/originals/2e/a9/e2/2ea9e2ee06ca162ba3e2b0e3548c842c.jpg' alt="Bob's burger street view"/>
     <header>
-        <h1>Bob's Burgers</h1>
+        <img style={logo} src="https://d144mzi0q5mijx.cloudfront.net/img/B/O/Bobs-Burgers.png"/>
         <nav style={navStyle}>
         <Link to="/">
             <div>HOME</div>

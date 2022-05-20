@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import App from '../App';
 import { useParams } from 'react-router-dom'
+import './CharactersList.css'
 
 
 
@@ -14,6 +15,7 @@ function CharactersList(props) {
                         <Link to={`/${idx}`} >
                             <h2>{character.name}</h2>
                         </Link>
+                        <hr/>
                     </div>
                 )) : <h3>LOADING! PLEASE WAIT!</h3>}
                 
@@ -21,25 +23,3 @@ function CharactersList(props) {
         )
         }
 export default CharactersList
-
-
-
-
-
-
-
-// console.log(props.characterslist);
-
-// return (
-//   <div>
-//       {props.charactersList ? props.charactersList.map((charactersList, idx) => (
-//               <div key={idx}>
-//                   <Link to={`/${idx}`} >
-//                       <h2>{charactersList.name}</h2>
-//                   </Link>
-//               </div>
-//           )) : <h3>LOADING! PLEASE WAIT!</h3>}
-          
-//   </div>
-// )
-// }
